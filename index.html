@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WEB ZONE · Sites que vendem pelo seu negócio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F4FF;--surface:#fff;--ink:#1A1646;--mute:#5B5880;--line:#DAD8F2;--blue:#3D4DFF;--coral:#FF6A57;--wa:#1FAE5B;--on-blue:#fff;--shadow:0 20px 50px -20px rgba(40,30,140,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11102B;--surface:#1B1A3D;--ink:#EDEBFF;--mute:#A9A6D0;--line:#33316B;--blue:#7482FF;--coral:#FF8272;--wa:#2ACB74;--on-blue:#0E0D26;--shadow:0 20px 50px -20px rgba(0,0,0,.7)}}
+:root[data-theme="dark"]{--bg:#11102B;--surface:#1B1A3D;--ink:#EDEBFF;--mute:#A9A6D0;--line:#33316B;--blue:#7482FF;--coral:#FF8272;--wa:#2ACB74;--on-blue:#0E0D26;--shadow:0 20px 50px -20px rgba(0,0,0,.7)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.03em}
+.logo i{color:var(--coral);font-style:normal}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;color:var(--mute);font-weight:500;font-size:15px}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;font:700 16px "DM Sans",sans-serif;padding:14px 24px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-ghost{background:transparent;border:2px solid var(--line);color:var(--ink)}
+.btn-sm{padding:10px 18px;font-size:14px}
+.hero{padding:64px 0 40px;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800}
+.hero h1 span{background:linear-gradient(100deg,var(--blue),var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;color:var(--mute);max-width:46ch;margin:22px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:var(--mute);font-size:14px}
+.proof b{color:var(--ink)}
+/* demo */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.bar b{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.bar em{margin-left:10px;font-style:normal;font-size:13px;color:var(--mute);background:var(--bg);padding:3px 14px;border-radius:99px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px 0}
+.chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);font:500 14px "DM Sans",sans-serif;padding:7px 14px;border-radius:99px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.screen{margin:14px 16px 16px;border-radius:16px;padding:26px 22px;background:var(--t-bg);color:var(--t-ink);min-height:280px;transition:background .35s,color .35s;position:relative;overflow:hidden}
+.screen small{opacity:.7;font-size:13px}
+.screen h3{font-size:30px;margin:6px 0 10px;max-width:14ch}
+.screen p{margin:0 0 18px;max-width:30ch;font-size:15px;opacity:.85}
+.screen .fake{display:inline-block;background:var(--t-ac);color:var(--t-on);font-weight:700;font-size:14px;padding:10px 18px;border-radius:99px}
+.screen .blob{position:absolute;right:-40px;bottom:-50px;width:190px;height:190px;border-radius:50%;background:var(--t-ac);opacity:.9;transition:background .35s}
+.screen .blob2{right:70px;bottom:-30px;width:90px;height:90px;opacity:.35}
+.hero{position:relative}.hero::before{content:"";position:absolute;inset:-60px 0 auto;height:440px;background:radial-gradient(60% 60% at 30% 30%,color-mix(in srgb,var(--blue) 30%,transparent),transparent 70%);z-index:-1;pointer-events:none}
+.mq{overflow:hidden;background:var(--ink);color:var(--bg);padding:18px 0;margin-top:24px}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 30s linear infinite;font:800 22px "Bricolage Grotesque",sans-serif;white-space:nowrap}
+.mq span{color:var(--coral)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.bt{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;grid-column:span 2}
+.bt h3{font-size:23px;margin-bottom:8px}.bt p{margin:0;color:var(--mute)}
+.bt.b1{grid-column:span 4;background:linear-gradient(135deg,var(--blue),#7B3DFF);border:0;color:#fff}
+.bt.b1 p{color:#fff;opacity:.88}.bt.b1 h3{font-size:32px}
+.bt.b6,.bt.b7{grid-column:span 3}
+@media (max-width:860px){.bento>*{grid-column:1/-1!important}}
+section{padding:72px 0}
+.sec-h{max-width:640px;margin-bottom:38px}
+.sec-h h2{font-size:clamp(30px,4.2vw,46px);font-weight:800}
+.sec-h p{color:var(--mute);margin:14px 0 0}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.feat div{padding:22px 0;border-top:1px solid var(--line)}
+.feat h3{font-size:22px;margin-bottom:6px}
+.feat p{margin:0;color:var(--mute)}
+.ports{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:1000px) and (min-width:861px){.ports{grid-template-columns:repeat(2,1fr)}}
+.port{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.port:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.port .m{height:170px;padding:18px;background:var(--t-bg);color:var(--t-ink);position:relative;overflow:hidden}
+.port .m b{font-family:"Bricolage Grotesque",sans-serif;font-size:22px;display:block;max-width:10ch;line-height:1.05}
+.port .m i{position:absolute;right:-24px;bottom:-24px;width:110px;height:110px;border-radius:50%;background:var(--t-ac)}
+.port .m u{display:inline-block;text-decoration:none;background:var(--t-ac);color:var(--t-on);font-size:12px;font-weight:700;padding:5px 12px;border-radius:99px;margin-top:12px}
+.port div.i{padding:14px 18px}
+.port strong{display:block}
+.port span{color:var(--mute);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{border-left:3px solid var(--blue);padding:4px 0 4px 20px}
+.step::before{counter-increment:s;content:counter(s);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:40px;color:var(--blue);line-height:1}
+.step h3{font-size:21px;margin:8px 0 6px}
+.step p{margin:0;color:var(--mute)}
+/* briefing */
+.brief{background:var(--ink);color:var(--bg);border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+:root[data-theme="dark"] .brief,:root:not([data-theme="light"]) .brief{--x:0}
+.brief h2{font-size:clamp(28px,4vw,42px);font-weight:800}
+.brief p{opacity:.8}
+.brief form{display:grid;gap:16px}
+.brief label{font-weight:700;font-size:14px;display:block;margin-bottom:6px}
+.brief input,.brief select{width:100%;font:500 16px "DM Sans",sans-serif;padding:13px 15px;border-radius:12px;border:2px solid transparent;background:#fff;color:#1A1646}
+.brief input:focus,.brief select:focus{border-color:var(--coral);outline:none}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{margin:0;font-weight:500;cursor:pointer}
+.opts input{position:absolute;opacity:0;width:0;height:0}
+.opts span{display:inline-block;padding:8px 15px;border-radius:99px;border:1.5px solid rgba(255,255,255,.35);font-size:14px}
+.opts input:checked+span{background:var(--coral);border-color:var(--coral);color:#fff}
+.opts input:focus-visible+span{outline:3px solid #fff}
+.note{font-size:13px;opacity:.7;margin:0}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:700 19px "Bricolage Grotesque",sans-serif;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::after{content:"+";color:var(--blue);font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin:10px 0 0;max-width:62ch}
+footer{padding:40px 0 100px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+.fl{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.float{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px -6px rgba(31,174,91,.6)}
+.float svg{width:30px;height:30px;fill:#fff}
+.tbtn{background:none;border:1.5px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px}
+.reveal{animation:up .8s .1s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:860px){.hero,.brief,.feat,.ports,.steps{grid-template-columns:1fr}.hero{padding-top:36px}.brief{padding:28px}.links a.h{display:none}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#topo">WEB <i>ZONE</i></a>
+<nav class="links"><a class="h" href="#exemplos">Exemplos</a><a class="h" href="#como">Como funciona</a><a class="h" href="#duvidas">Dúvidas</a>
+<button class="tbtn" id="tema" aria-label="Alternar tema claro e escuro">◐</button>
+<a class="btn btn-wa btn-sm" href="#pedido">Pedir meu site</a></nav>
+</div></header>
+
+<main id="topo">
+<div class="wrap hero">
+<div class="reveal">
+<h1>A WEB ZONE cria o site que <span>vende por você.</span></h1>
+<p class="lead">Criamos o site do seu jeito, bonito no celular e pronto para o cliente chamar direto no seu WhatsApp. Você vê uma prévia antes de decidir.</p>
+<div class="cta"><a class="btn btn-wa" href="#pedido">Quero meu site</a><a class="btn btn-ghost" href="#exemplos">Ver exemplos</a></div>
+<div class="proof"><span><b>Prévia grátis</b> antes de fechar</span><span><b>Celular primeiro</b></span><span><b>Atendimento</b> direto no WhatsApp</span></div>
+</div>
+<div class="demo reveal" aria-label="Demonstração interativa">
+<div class="bar"><b></b><b></b><b></b><em id="url">seunegocio.com.br</em></div>
+<div class="chips" role="group" aria-label="Escolha um tipo de negócio para ver um exemplo">
+<button class="chip" aria-pressed="true" data-k="0">Confeitaria</button>
+<button class="chip" aria-pressed="false" data-k="1">Barbearia</button>
+<button class="chip" aria-pressed="false" data-k="2">Moda</button>
+<button class="chip" aria-pressed="false" data-k="3">Clínica</button>
+</div>
+<div class="screen" id="scr"><small id="s-t"></small><h3 id="s-h"></h3><p id="s-p"></p><span class="fake" id="s-b"></span><i class="blob"></i><i class="blob blob2"></i></div>
+</div>
+</div>
+
+<div class="mq" aria-hidden="true"><div><b>CATÁLOGO <span>✦</span> AGENDAMENTO <span>✦</span> GALERIA <span>✦</span> WHATSAPP <span>✦</span> GOOGLE <span>✦</span> MOBILE <span>✦</span> </b><b>CATÁLOGO <span>✦</span> AGENDAMENTO <span>✦</span> GALERIA <span>✦</span> WHATSAPP <span>✦</span> GOOGLE <span>✦</span> MOBILE <span>✦</span> </b></div></div>
+<section id="porque"><div class="wrap">
+<div class="sec-h"><h2>Feito para o cliente chegar e já pedir.</h2><p>Nada de site bonito que ninguém usa. Cada detalhe existe para levar a pessoa até a sua conversa.</p></div>
+<div class="feat">
+<div><h3>Abre rápido em qualquer celular</h3><p>A maioria dos seus clientes vai ver o site pelo telefone. Ele é pensado para isso desde o primeiro traço.</p></div>
+<div><h3>Botão de WhatsApp sempre à mão</h3><p>Em qualquer ponto da página, um toque abre a conversa com a mensagem já escrita.</p></div>
+<div><h3>Visual que passa confiança</h3><p>Cores, fontes e fotos combinando com a sua marca, para o cliente confiar antes de falar com você.</p></div>
+<div><h3>Fácil de achar no Google</h3><p>Estrutura organizada para sua cidade e seu serviço aparecerem quando alguém pesquisar.</p></div>
+</div></div></section>
+
+<section id="recursos"><div class="wrap">
+<div class="sec-h"><h2>O que a WEB ZONE coloca no seu site.</h2><p>Você escolhe o que faz sentido para o seu negócio. O resto a gente deixa de fora.</p></div>
+<div class="bento">
+<div class="bt b1"><h3>Pedidos direto no WhatsApp</h3><p>O cliente escolhe, toca no botão e a conversa abre com o pedido pronto. Menos mensagens perdidas, mais venda fechada.</p></div>
+<div class="bt"><h3>Catálogo</h3><p>Seus produtos ou serviços organizados, com foto e descrição.</p></div>
+<div class="bt"><h3>Agendamento</h3><p>Horários para o cliente marcar sem precisar ficar perguntando.</p></div>
+<div class="bt"><h3>Galeria</h3><p>Fotos do seu trabalho para mostrar a qualidade antes da conversa.</p></div>
+<div class="bt"><h3>Mapa e horários</h3><p>Endereço, rota e funcionamento claros para quem quer ir até você.</p></div>
+<div class="bt b6"><h3>Aparece no Google</h3><p>Estrutura pensada para sua cidade e seu serviço serem encontrados.</p></div>
+<div class="bt b7"><h3>Identidade própria</h3><p>Cores, fontes e textos da sua marca. Nada de modelo igual ao de todo mundo.</p></div>
+</div></div></section>
+
+<section id="exemplos"><div class="wrap">
+<div class="sec-h"><h2>Cada site com a cara do negócio.</h2><p>Exemplos ilustrativos de estilos. O seu sai do zero, com as suas cores e o seu texto.</p></div>
+<div class="ports" id="ports"></div>
+</div></section>
+
+<section id="como"><div class="wrap">
+<div class="sec-h"><h2>Do primeiro “oi” ao site no ar.</h2></div>
+<div class="steps">
+<div class="step"><h3>Você chama no WhatsApp</h3><p>Conta o que faz e o que quer no site. Eu passo o valor final no privado, sem enrolação.</p></div>
+<div class="step"><h3>Você recebe a prévia</h3><p>Monto uma prévia com a sua identidade para você ver como vai ficar.</p></div>
+<div class="step"><h3>Ajustes e publicação</h3><p>Ajustamos o que precisar e o site vai ao ar, pronto para receber clientes.</p></div>
+</div></div></section>
+
+<section id="pedido"><div class="wrap">
+<div class="brief">
+<div><h2>Monte seu pedido em 20 segundos.</h2><p>Responda rápido e o WhatsApp abre com tudo escrito. É só enviar.</p></div>
+<form id="f">
+<div><label for="nome">Seu nome</label><input id="nome" required autocomplete="given-name" placeholder="Como posso te chamar?"></div>
+<div><label for="seg">Tipo de negócio</label><select id="seg"><option>Confeitaria ou alimentação</option><option>Beleza e estética</option><option>Loja ou moda</option><option>Saúde e clínica</option><option>Serviços e profissionais</option><option>Outro</option></select></div>
+<div><label id="lo">O que o site precisa ter</label><div class="opts" role="group" aria-labelledby="lo">
+<label><input type="checkbox" value="catálogo de produtos"><span>Catálogo</span></label>
+<label><input type="checkbox" value="botão de WhatsApp" checked><span>WhatsApp</span></label>
+<label><input type="checkbox" value="galeria de fotos"><span>Galeria</span></label>
+<label><input type="checkbox" value="mapa e horários"><span>Mapa e horários</span></label>
+<label><input type="checkbox" value="agendamento"><span>Agendamento</span></label></div></div>
+<button class="btn btn-wa" type="submit">Enviar pelo WhatsApp</button>
+<p class="note">Sem compromisso. Você só decide depois de ver a prévia.</p>
+</form></div></div></section>
+
+<section id="duvidas"><div class="wrap">
+<div class="sec-h"><h2>Dúvidas comuns</h2></div>
+<details><summary>Quanto custa?</summary><p>Depende do que você precisa. Me chame no WhatsApp, conte sua ideia e eu passo o valor final no privado.</p></details>
+<details><summary>Em quanto tempo fica pronto?</summary><p>Depois que você manda as informações, a prévia sai rápido. O prazo final varia com o tamanho do site e vou combinar com você na conversa.</p></details>
+<details><summary>Preciso entender de tecnologia?</summary><p>Não. Você me conta o que quer em linguagem normal e eu cuido do resto.</p></details>
+<details><summary>Posso pedir mudanças depois?</summary><p>Pode. Ajustes fazem parte do processo, e depois de publicado é só chamar de novo.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap fl"><span>WEB ZONE · sites que vendem · WhatsApp (11) 96650-7813</span><a class="btn btn-wa btn-sm" href="https://wa.me/5511966507813">Falar agora</a></div></footer>
+
+<a class="float" id="fl" href="https://wa.me/5511966507813?text=Ol%C3%A1!%20Quero%20um%20site%20para%20o%20meu%20neg%C3%B3cio." aria-label="Chamar no WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.2.6 4.3 1.700 6.2L3 29l7.500-2c1.800 1 3.800 1.500 5.800 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 0 1-1.600-5.500C5.400 9.800 10.100 5.200 16 5.200S26.600 9.800 26.600 15.500 21.900 25.800 16 25.800zm5.800-7.700c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.200 1.200-1.200 2.800 1.200 3.300 1.400 3.500 2.400 3.700 5.800 5.100c2.100.9 2.900.9 4 .8.600-.1 1.900-.8 2.200-1.500.3-.8.300-1.400.2-1.500s-.3-.2-.6-.4z"/></svg></a>
+
+<script>
+var T=[
+{n:"Confeitaria",u:"docesdamaria.com.br",a:"Doces artesanais",h:"Bolos que viram festa",p:"Escolha o sabor e faça sua encomenda pelo WhatsApp.",b:"Encomendar agora",bg:"#FFE3EC",ink:"#5A1B33",ac:"#E8467C",on:"#fff"},
+{n:"Barbearia",u:"barbeariacentral.com.br",a:"Corte e barba",h:"Agende seu horário",p:"Sem fila e sem espera. Escolha o dia e confirme.",b:"Agendar corte",bg:"#1F2937",ink:"#F3F4F6",ac:"#F5B83D",on:"#1F2937"},
+{n:"Moda",u:"lojaestilo.com.br",a:"Nova coleção",h:"Looks para todo dia",p:"Veja as peças e peça pelo WhatsApp com entrega.",b:"Ver coleção",bg:"#E8F3E4",ink:"#1E3A2B",ac:"#2F7D4F",on:"#fff"},
+{n:"Clínica",u:"clinicabemestar.com.br",a:"Cuidado de verdade",h:"Sua consulta sem complicação",p:"Veja os serviços, o endereço e marque pelo WhatsApp.",b:"Marcar consulta",bg:"#E3F0FF",ink:"#0F2A4D",ac:"#2468D8",on:"#fff"}
+];
+function paint(el,t){var s=el.style;s.setProperty("--t-bg",t.bg);s.setProperty("--t-ink",t.ink);s.setProperty("--t-ac",t.ac);s.setProperty("--t-on",t.on)}
+var scr=document.getElementById("scr");
+function show(k){var t=T[k];paint(scr,t);document.getElementById("s-t").textContent=t.a;document.getElementById("s-h").textContent=t.h;document.getElementById("s-p").textContent=t.p;document.getElementById("s-b").textContent=t.b;document.getElementById("url").textContent=t.u;
+document.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",c.dataset.k==k)})}
+document.querySelectorAll(".chip").forEach(function(c){c.addEventListener("click",function(){show(+c.dataset.k)})});
+show(0);
+var P=document.getElementById("ports");
+T.forEach(function(t,i){var a=document.createElement("a");a.className="port";a.href="#pedido";
+a.innerHTML='<div class="m"><b></b><u></u><i></i></div><div class="i"><strong></strong><span>Quero um parecido</span></div>';
+paint(a.querySelector(".m"),t);a.querySelector("b").textContent=t.h;a.querySelector("u").textContent=t.b;a.querySelector("strong").textContent=t.n;
+a.addEventListener("click",function(){document.getElementById("seg").selectedIndex=[0,1,2,3][i]});P.appendChild(a)});
+P.style.gridTemplateColumns="";
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();
+var n=document.getElementById("nome").value.trim(),s=document.getElementById("seg").value;
+var o=[].slice.call(document.querySelectorAll(".opts input:checked")).map(function(x){return x.value});
+var m="Olá! Meu nome é "+n+". Tenho um negócio de "+s.toLowerCase()+" e quero um site"+(o.length?" com "+o.join(", "):"")+". Pode me passar o valor e mostrar uma prévia?";
+window.open("https://wa.me/5511966507813?text="+encodeURIComponent(m),"_blank","noopener")});
+document.getElementById("tema").addEventListener("click",function(){var r=document.documentElement,d=r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");r.setAttribute("data-theme",d==="dark"?"light":"dark")});
+</script>
+</body>
+</html>
